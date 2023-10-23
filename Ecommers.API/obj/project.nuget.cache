@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "hQ9p0qQfl5ao7FcZ2ob/Qd5fSpmfCbrZT5ITrcBqrnAjYIZXGG3yrQSJEFsRW4+eVz4M8+slRFRnxXNDLR94Gg==",
+  "success": true,
+  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/Ecommers.API/Ecommers.API.csproj",
+  "expectedPackageFiles": [
+    "/home/fundacion/.nuget/packages/microsoft.aspnetcore.openapi/7.0.12/microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/rabbitmq.client/6.6.0/rabbitmq.client.6.6.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
