@@ -10,26 +10,40 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[controller]")]
 public class BookingController : ControllerBase
 {
-    private readonly ILogger<BookingController> _logger;
     private readonly IMessagesProducer _messageProducer;
+    private readonly ILogger<BookingController> _logger;
+    private static readonly List<Booking> _bookings = new List<Booking>();
+    private static readonly List<Product> _cart = new List<Product>();
 
-    public static readonly List<Booking> _bookings = new();
+    private static readonly List<Product> _products = ProductController.products();
+
     public BookingController(ILogger<BookingController> logger, IMessagesProducer messageProducer)
     {
         _logger = logger;
         _messageProducer = messageProducer;
     }
 
-    [HttpPost]
-    public IActionResult CreatingBooking(Booking newBooking)
+    [HttpPost("AddToCart")]
+    public IActionResult AddToCart(int productId, string userName)
     {
-        if(!ModelState.IsValid)
+        var existingProduct = _products.FirstOrDefault(p => p.Id == productId);
+
+        if (existingProduct == null)
         {
-            return BadRequest();
+            return NotFound("Producto no encontrado.");
         }
 
-        _bookings.Add(newBooking);
-        _messageProducer.SendingMessages<Booking>(newBooking);
+        var existingProductInCart = _cart.FirstOrDefault(p => p.Id == productId);
+
+        if (existingProduct.Stock == 0)
+        {
+            return BadRequest("El producto ya alcanzó el limite se stock.");
+        }
+
+        _cart.Add(existingProduct);
+        existingProduct.Stock --;
+
+        _messageProducer.SendingMessages<Product>(existingProduct);
 
         return Ok();
     }
