@@ -22,16 +22,20 @@ function App() {
         });
 }, []);
 
-const addProduct = () => {
-  axios.put(`https://ecommersback.azurewebsites.net/Ecommers`)
-    .then(response => {
-      if (response.status === 201) {
-        console.log('Product added successfully.');
-      } else {
-        console.error('Error adding to cart:', response.statusText);
-      }
-    })
-    .catch(error => console.error('Error adding:', error));
+const addProduct = (product) = async () => {
+  try {
+    const response = await axios.post('https://ecommersback.azurewebsites.net/Ecommers', {
+      Name: product.Name,
+      Price: product.Price,
+      Stock: product.Stock,
+      Category: product.Category,
+      CountInCart: product.CountInCart,
+    });
+
+    console.log('Product created:', response.data);
+  } catch (error) {
+    console.error('Error creating product:', error);
+  }
 };
 
 const addToCart = (productId) => {
