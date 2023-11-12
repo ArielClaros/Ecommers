@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bVyD6137CaxFIlkvTQ0ZZ/gj8XLcGnNQQ4MZ8Rk6Rdl3fmwvdzf6D+Fx/fxsnzHPkvtNEGG2XLhhBaVtrlsrvQ==",
+  "dgSpecHash": "fb2Y4QXc7MTqg43UbeiHMkHxVfR9rtdUOlbCnea4NXSJPd4h1Z3I6Dl56rev08yZkPktDZezz8SMktglYJWmcg==",
   "success": true,
-  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
+  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
   "expectedPackageFiles": [
     "/home/fundacion/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/fundacion/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",

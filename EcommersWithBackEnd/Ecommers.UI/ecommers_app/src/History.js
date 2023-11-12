@@ -5,7 +5,7 @@ const HistoryPage = () => {
   const [historyProducts, setHistoryProducts] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:5193/Ecommers')
+      .get('https://ecommersback.azurewebsites.net/Ecommers')
       .then((response) => {
   
         const historyProducts = response.data.filter((product) => product.category === 'history');

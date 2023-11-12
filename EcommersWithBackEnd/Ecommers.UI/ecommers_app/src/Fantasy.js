@@ -5,7 +5,7 @@ const FantasyPage = () => {
   const [fantasyProducts, setFantasyProducts] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:5193/Ecommers')
+      .get('https://ecommersback.azurewebsites.net/Ecommers')
       .then((response) => {
   
         const fantasyProducts = response.data.filter((product) => product.category === 'fantasy');

@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     axios
-        .get("http://localhost:5193/Ecommers/products")
+        .get("https://ecommersback.azurewebsites.net/Ecommers/products")
         .then((response) => {
             setProducts(response.data);
         })
@@ -21,8 +21,21 @@ function App() {
             console.error("Error al obtener los productos:", error);
         });
 }, []);
+
+const addProduct = () => {
+  axios.put(`https://ecommersback.azurewebsites.net/Ecommers`)
+    .then(response => {
+      if (response.status === 201) {
+        console.log('Product added successfully.');
+      } else {
+        console.error('Error adding to cart:', response.statusText);
+      }
+    })
+    .catch(error => console.error('Error adding:', error));
+};
+
 const addToCart = (productId) => {
-  axios.put(`http://localhost:5193/Ecommers/${productId}`)
+  axios.put(`https://ecommersback.azurewebsites.net/Ecommers/${productId}`)
     .then(response => {
       if (response.status === 204) {
         console.log('Product added to cart successfully.');
@@ -48,6 +61,7 @@ const addToCart = (productId) => {
       </ul>
 
       <button onClick={handleClick}>Go to Category Page</button>
+      <button onClick={addProduct}>Add Product</button>
       <Link to="/cart">
       <button style={{marginLeft: "10px"}}>Cart</button>
       </Link>

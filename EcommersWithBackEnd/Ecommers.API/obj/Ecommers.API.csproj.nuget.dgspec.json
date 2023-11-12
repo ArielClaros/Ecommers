@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj": {}
+    "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj": {}
   },
   "projects": {
-    "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj": {
+    "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
+        "projectUniqueName": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
         "projectName": "Ecommers.API",
-        "projectPath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
+        "projectPath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/Ecommers.API.csproj",
         "packagesPath": "/home/fundacion/.nuget/packages/",
-        "outputPath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/EcommersWithBackEnd/Ecommers.API/obj/",
+        "outputPath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/fundacion/.nuget/NuGet/NuGet.Config"

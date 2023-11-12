@@ -6,7 +6,7 @@ const PaymentPage = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5193/Ecommers/pay')
+      .get('https://ecommersback.azurewebsites.net/Ecommers/pay')
       .then((response) => {
         setTotalPrice(response.data);
       })

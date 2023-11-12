@@ -7,7 +7,7 @@ const CartPage = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5193/Ecommers/cart')
+      .get('https://ecommersback.azurewebsites.net/Ecommers/cart')
       .then((response) => {
         setCartProducts(response.data);
       })
