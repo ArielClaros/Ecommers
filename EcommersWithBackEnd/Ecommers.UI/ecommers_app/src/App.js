@@ -6,6 +6,34 @@ import './App.css';
 function App() {
   const [products, setProducts] = useState([]);
   const history = useNavigate();
+  const [newProductName, setNewProductName] = useState('');
+  const [newProductPrice, setNewProductPrice] = useState(0);
+  const [newProductStock, setNewProductStock] = useState(0);
+  const [newProductCategory, setNewProductCategory] = useState('');
+  const [newProductCountInCart, setNewProductCountInCart] = useState(0);
+  const [showAddProductPopup, setShowAddProductPopup] = useState(false);
+  const showPopup = () => setShowAddProductPopup(true);
+  const hidePopup = () => setShowAddProductPopup(false);
+
+  const renderAddProductPopup = () => {
+    return (
+      <div className="popup">
+        <h2>Add New Product</h2>
+        <label>Name:</label>
+        <input type="text" value={newProductName} onChange={(e) => setNewProductName(e.target.value)} />
+        <label>Price:</label>
+        <input type="number" value={newProductPrice} onChange={(e) => setNewProductPrice(Number(e.target.value))} />
+        <label>Stock:</label>
+        <input type="number" value={newProductStock} onChange={(e) => setNewProductStock(Number(e.target.value))} />
+        <label>Category:</label>
+        <input type="text" value={newProductCategory} onChange={(e) => setNewProductCategory(e.target.value)} />
+        <label>CountInCart:</label>
+        <input type="text" value={newProductCountInCart} onChange={(e) => setNewProductCountInCart(e.target.value)} />
+        <button onClick={addNewProduct}>Create Product</button>
+        <button onClick={hidePopup}>Cancel</button>
+      </div>
+    );
+  };
 
   const handleClick = () => {
     history('/category');
@@ -22,7 +50,7 @@ function App() {
         });
 }, []);
 
-const addProduct = (product) = async () => {
+const addProduct = async (product) => {
   try {
     const response = await axios.post('https://ecommersback.azurewebsites.net/Ecommers', {
       Name: product.Name,
@@ -36,6 +64,25 @@ const addProduct = (product) = async () => {
   } catch (error) {
     console.error('Error creating product:', error);
   }
+};
+
+const addNewProduct = async () => {
+  const newProduct = {
+    Name: newProductName,
+    Price: newProductPrice,
+    Stock: newProductStock,
+    Category: newProductCategory,
+    CountInCart: newProductCountInCart,
+  };
+
+  await addProduct(newProduct);  // Llamada a la función existente.
+
+  // Limpiar campos y ocultar el pop-up después de agregar el producto.
+  setNewProductName('');
+  setNewProductPrice(0);
+  setNewProductStock(0);
+  setNewProductCategory('');
+  hidePopup();
 };
 
 const addToCart = (productId) => {
@@ -65,7 +112,8 @@ const addToCart = (productId) => {
       </ul>
 
       <button onClick={handleClick}>Go to Category Page</button>
-      <button onClick={addProduct}>Add Product</button>
+      <button onClick={showPopup}>Add Product</button>
+      {showAddProductPopup && renderAddProductPopup()}
       <Link to="/cart">
       <button style={{marginLeft: "10px"}}>Cart</button>
       </Link>

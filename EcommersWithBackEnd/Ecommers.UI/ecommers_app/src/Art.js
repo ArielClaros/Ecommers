@@ -5,7 +5,7 @@ const ArtPage = () => {
   const [artProducts, setArtProducts] = useState([]);
   useEffect(() => {
     axios
-      .get('https://ecommersback.azurewebsites.net/Ecommers')
+      .get('https://ecommersback.azurewebsites.net/Ecommers/products')
       .then((response) => {
   
         const artProducts = response.data.filter((product) => product.category === 'art');
@@ -18,9 +18,9 @@ const ArtPage = () => {
   }, []);
 
   const addToCart = (productId) => {
-    axios.post(`https://ecommersback.azurewebsites.net/Ecommers/${productId}`)
+    axios.put(`https://ecommersback.azurewebsites.net/Ecommers/${productId}`)
       .then(response => {
-        if (response.status === 200) {
+        if (response.status === 204) {
           console.log('Product added to cart successfully.');
         } else {
           console.error('Error adding to cart:', response.statusText);
