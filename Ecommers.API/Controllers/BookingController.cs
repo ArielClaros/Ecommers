@@ -23,6 +23,12 @@ public class BookingController : ControllerBase
         _messageProducer = messageProducer;
     }
 
+    [HttpGet("GetCart")]
+    public IActionResult GetCart()
+    {
+        return Ok(_cart);
+    }
+    
     [HttpPost("AddToCart")]
     public IActionResult AddToCart(int productId, string userName)
     {
@@ -46,5 +52,9 @@ public class BookingController : ControllerBase
         _messageProducer.SendingMessages<Product>(existingProduct);
 
         return Ok();
+    }
+
+    public static List<Product> CartProducts(){
+        return _cart;
     }
 }

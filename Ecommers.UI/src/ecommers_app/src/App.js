@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import './App.css';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const history = useNavigate();
+
+  const handleClick = () => {
+    history('/category');
+  };
 
   useEffect(() => {
     axios
@@ -40,6 +46,11 @@ const addToCart = (productId) => {
           </li>
         ))}
       </ul>
+
+      <button onClick={handleClick}>Go to Category Page</button>
+      <Link to="/cart">
+      <button style={{marginLeft: "10px"}}>Cart</button>
+      </Link>
     </div>
   );
 }
