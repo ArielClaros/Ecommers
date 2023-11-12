@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "gQqMOfpAJRfsG2JWEUPtEot5BeSNXUbeIUJTPFMy4q1XNIbCdLgMyxpTAJMTVSFWisA+yzv/vOUD0lp2a3YYfA==",
+  "success": true,
+  "projectFilePath": "/home/fundacion/Escritorio/6to Semestre/Desarrollo de sistemas web/Ecommers/Ecommers/EcommersWithBackEnd/Ecommers.TicketProcessing/Ecommers.TicketProcessing.csproj",
+  "expectedPackageFiles": [
+    "/home/fundacion/.nuget/packages/rabbitmq.client/6.6.0/rabbitmq.client.6.6.0.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/fundacion/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
